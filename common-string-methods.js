@@ -45,6 +45,9 @@ let textRetrieve = "Bootcamp";
 let textRetrieveSliced = textRetrieve.slice(4, 8);
 console.log(textRetrieve.charAt(0) + textRetrieveSliced) // first index is zero + sliced camp - output: Bcamp
 
+let hLine = "-------------------------------";
+console.log(hLine) // line to help visually separate Problem answers
+
 /*
 Advanced Challenge
 Write a program to process the following string:
@@ -54,8 +57,38 @@ Total: $20.50
 Extract the customer name.
 Split the order into an array of items.
 Convert the total price to uppercase (e.g., "TOTAL: $20.50").
+*/
 
+let inputOrder = `Customer: John Doe Order: Apple, Banana, Grape Total: $20.50`;
+let customerName = inputOrder.slice(10, 18);
+let orderArray = inputOrder.split(" ");
+let totalPrice = inputOrder.slice(inputOrder.indexOf("Total: $20.50")).toUpperCase();
+console.log({
+  customerName,
+  orderArray,
+  totalPrice
+});
 
+/*
+-- OUTPUT --
+{
+  customerName: 'John Doe',
+  orderArray: [
+    'Customer:',
+    'John',
+    'Doe\nOrder:',
+    'Apple,',
+    'Banana,',
+    'Grape\nTotal:',
+    '$20.50'
+  ],
+  totalPrice: 'TOTAL: $20.50'
+}
+*/
+
+console.log(hLine) // line to help visually separate Problem answers
+
+/*
 Practice Problem #2
 
 Objective
@@ -79,16 +112,13 @@ Complete the following tasks and assign the results to the specified variables. 
   - Check if the string ends with "today." using endsWith and assign the result to a variable named endsWithToday.
 */
 
-let hLine = "-------------------------------";
-console.log(hLine) // line to help visually separate Problem answers
-
 //Starter Code
 let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
 
-let hasJavaScript = inputString.includes("JavaScript"); // true
-let codingPosition = inputString.indexOf("Coding"); // Coding at 17
-let startsWithWelcome = inputString.startsWith("Welcome"); // false because spaces beforehand
-let endsWithToday = inputString.endsWith("today."); // false because spaces on end
+let hasJavaScript = inputString.includes("JavaScript"); // output: true
+let codingPosition = inputString.indexOf("Coding"); // output: Coding at 17
+let startsWithWelcome = inputString.startsWith("Welcome"); // output: false - because spaces beforehand
+let endsWithToday = inputString.endsWith("today."); // output: false - because spaces on end
 
 /*
 2. Transforming
@@ -108,7 +138,7 @@ let replacedString = inputString.replace("JavaScript", "coding"); // output:   W
   - Split the string into an array of words using split with a space (" ") as the delimiter and assign the result to a variable named wordsArray.
 */
 
-let wordsArray = inputString.split(" "); // Your code here
+let wordsArray = inputString.split(" ");
 
 /*
 4. Retrieving
