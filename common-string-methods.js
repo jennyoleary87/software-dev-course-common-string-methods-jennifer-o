@@ -77,44 +77,48 @@ Complete the following tasks and assign the results to the specified variables. 
   - Find the position of the word "Coding" in the string using indexOf and assign the result to a variable named codingPosition.
   - Check if the string starts with "Welcome" using startsWith and assign the result to a variable named startsWithWelcome.
   - Check if the string ends with "today." using endsWith and assign the result to a variable named endsWithToday.
+*/
 
+let hLine = "-------------------------------";
+console.log(hLine) // line to help visually separate Problem answers
+
+//Starter Code
+let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
+
+let hasJavaScript = inputString.includes("JavaScript"); // true
+let codingPosition = inputString.indexOf("Coding"); // Coding at 17
+let startsWithWelcome = inputString.startsWith("Welcome"); // false because spaces beforehand
+let endsWithToday = inputString.endsWith("today."); // false because spaces on end
+
+/*
 2. Transforming
   - Convert the string to all lowercase letters using toLowerCase and assign the result to a variable named lowercaseString.
   - Convert the string to all uppercase letters using toUpperCase and assign the result to a variable named uppercaseString.
   - Remove the extra spaces from the beginning and end of the string using trim and assign the result to a variable named trimmedString.
   - Replace the word "JavaScript" with "coding" using replace and assign the result to a variable named replacedString.
+*/
 
+let lowercaseString = inputString.toLowerCase(); // output:   welcome to the coding bootcamp! learn javascript today.  
+let uppercaseString = inputString.toUpperCase(); // output:   WELCOME TO THE CODING BOOTCAMP! LEARN JAVASCRIPT TODAY.  
+let trimmedString = inputString.trim(); // output: Welcome to the Coding Bootcamp! Learn JavaScript today.
+let replacedString = inputString.replace("JavaScript", "coding"); // output:   Welcome to the Coding Bootcamp! Learn coding today.  
+
+/*
 3. Breaking Apart
   - Split the string into an array of words using split with a space (" ") as the delimiter and assign the result to a variable named wordsArray.
+*/
 
+let wordsArray = inputString.split(" "); // Your code here
+
+/*
 4. Retrieving
   - Retrieve the first character of the trimmed string using charAt and assign the result to a variable named firstCharacter.
   - Extract the word "Bootcamp" from the string using slice and assign the result to a variable named extractedBootcamp.
 
 */
 
-/*
-//Starter Code
-let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
-
-// 1. Searching
-let hasJavaScript; // Your code here
-let codingPosition; // Your code here
-let startsWithWelcome; // Your code here
-let endsWithToday; // Your code here
-
-// 2. Transforming
-let lowercaseString; // Your code here
-let uppercaseString; // Your code here
-let trimmedString; // Your code here
-let replacedString; // Your code here
-
-// 3. Breaking Apart
-let wordsArray; // Your code here
-
-// 4. Retrieving
-let firstCharacter; // Your code here
-let extractedBootcamp; // Your code here
+let firstCharacter = trimmedString.charAt(0); // output: W
+let extractedBootcamp = inputString.slice(24, 32); // output: Bootcamp
 
 // Log all results
 console.log({
@@ -131,4 +135,3 @@ console.log({
   extractedBootcamp,
 });
 
-*/
