@@ -1,4 +1,7 @@
 /*
+03/12/2025
+software-dev-course-common-string-methods-jennifer-o
+Assignment: Practice: Stringing Characters Together: String Methods
 
 Practice Problem #1
 
@@ -6,18 +9,43 @@ Activity 1: Searching Strings
 Write a program to:
 Check if the text "JavaScript" is in the string "Learning JavaScript is fun!" using includes.
 Find the position of the word "fun" in the string.
+*/
 
+let textFun = "Learning JavaScript is fun!";
+console.log(textFun.includes("JavaScript")) // output: true
+console.log(textFun.indexOf("fun")) // output: 23
+
+/*
 Activity 2: Transforming Strings
 Convert the string " CODE BOOTCAMP " to lowercase and remove all extra whitespace.
 Replace "BOOTCAMP" with "JavaScript" in the transformed string.
+*/
 
+let textTransform = " CODE BOOTCAMP ";
+let newTextTransform = textTransform.toLowerCase().trim().replace('bootcamp', 'JavaScript');
+console.log(newTextTransform) // output: code JavaScript
+
+
+/*
 Activity 3: Breaking Apart a Sentence
 Split the sentence "Coding is fun and educational" into an array of words.
+*/
 
+let textBreaking = "Coding is fun and educational";
+let newTextBreaking = textBreaking.split(" "); // splits at spaces into array of words
+console.log(newTextBreaking) // output: [ 'Coding', 'is', 'fun', 'and', 'educational' ]
+
+/*
 Activity 4: Retrieving Substrings
 Retrieve the first character of "Bootcamp" using charAt.
 Extract the word "camp" from "Bootcamp" using slice.
+*/
 
+let textRetrieve = "Bootcamp";
+let textRetrieveSliced = textRetrieve.slice(4, 8);
+console.log(textRetrieve.charAt(0) + textRetrieveSliced) // first index is zero + sliced camp - output: Bcamp
+
+/*
 Advanced Challenge
 Write a program to process the following string:
 Customer: John Doe
@@ -65,6 +93,7 @@ Complete the following tasks and assign the results to the specified variables. 
 
 */
 
+/*
 //Starter Code
 let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
 
@@ -101,3 +130,5 @@ console.log({
   firstCharacter,
   extractedBootcamp,
 });
+
+*/
