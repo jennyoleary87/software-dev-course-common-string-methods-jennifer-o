@@ -69,23 +69,6 @@ console.log({
   totalPrice
 });
 
-/*
--- OUTPUT --
-{
-  customerName: 'John Doe',
-  orderArray: [
-    'Customer:',
-    'John',
-    'Doe\nOrder:',
-    'Apple,',
-    'Banana,',
-    'Grape\nTotal:',
-    '$20.50'
-  ],
-  totalPrice: 'TOTAL: $20.50'
-}
-*/
-
 console.log(hLine) // line to help visually separate Problem answers
 
 /*
